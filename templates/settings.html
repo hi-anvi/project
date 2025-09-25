@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block body %}
+
+    <div class="alert alert-warning">
+        <h2>Add to contacts</h2>
+    </div>
+    <form class="text-center" action="/settings" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Contact username"
+                type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+    <div class="alert alert-warning">
+        <h2>Delete tag</h2>
+    </div>
+    <form class="text-center" action="/settings" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="account"
+                placeholder="Contact username" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="tag" placeholder="Tag to delete"
+                type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+    <div class="alert alert-warning">
+        <h2>Add tag</h2>
+    </div>
+    <form class="text-center" action="/settings" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="account-add"
+                placeholder="Contact username" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="tag-add" placeholder="Tag to add"
+                type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

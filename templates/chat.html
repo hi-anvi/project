@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chat
+{% endblock %}
+
+{% block body %}
+<div class="main-container">
+    <div class="sidebar">
+        <div class="barhead">Tags</div>
+        <ul class=".item-list">
+            <form action="/chat" method="post">
+            {% for tag in tags %}
+                <li class="item">
+                    <button class="tag item-list" name="tag" value="{{ tag.tag }}" type="submit">{{ tag.tag }}</button>
+                </li>
+            {% endfor %}
+            </form>
+        </ul>
+    </div>
+    <div class="chat">
+        {% if session["tag"] %}
+            <form action="/chat" method="post">
+                <input type="text" autofocus autocomplete="off" class="input" name="message" placeholder="Enter message">
+                <button type="submit"><img src="/static/send.png" width=20px class="send" alt="send"></button>
+            </form>
+        {% endif %}
+
+    {% if messages %}
+    <ul class="item-list">
+        {% for message in messages %}
+            {% if message.sender_id == session["user_id"] %}
+                <li><div class="you-message">{{ message.message }}</div></li>
+            {% else %}
+                <li><div class="pal-message"><span class="pal-name">{{ contact }}</span><br>{{ message.message }}</div></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
+        {% if session["tag"] %}
+            <div class="site-message">No known messages. Start messaging to dismiss.</div>
+        {% else %}
+            <div class="site-message">Choose a tag to dismiss.</div>
+        {% endif %}
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

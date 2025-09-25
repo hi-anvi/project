@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block body %}
+<!-- https://memegen.link/ -->
+<!-- https://knowyourmeme.com/memes/grumpy-cat -->
+    <div class="text-center">
+        <img alt="{{ error }}" src="/static/crazy-girl-error.png" title="{{ error }}" height=500px>
+        <div class="alert alert-info">
+            <h2>{{ error }} {{ main }}</h2>
+        </div>
+    </div>
+{% endblock %}
