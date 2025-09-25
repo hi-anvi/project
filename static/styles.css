@@ -1,0 +1,153 @@
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue {
+    color: #537fbe;
+}
+
+nav .navbar-brand .red {
+    color: #ea433b;
+}
+
+nav .navbar-brand .yellow {
+    color: #f5b82e;
+}
+
+nav .navbar-brand .green {
+    color: #2e944b;
+}
+
+.text-center {
+    margin: auto;
+    text-align: center;
+}
+
+.sidebar {
+    margin: 0px;
+    padding: 15px;
+    border: 1px solid black;
+    height: 90.7vh;
+    width: 20%;
+    background-color: cyan;
+    flex: 0 0 20%;
+}
+
+.sidebar .barhead {
+    font-size: xx-large;
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+.sidebar .blue {
+    color: #537fbe;
+}
+
+.sidebar .red {
+    background-color: #ea433b;
+}
+
+.sidebar .yellow {
+    color: #f5b82e;
+}
+
+.sidebar .green {
+    color: #2e944b;
+}
+
+.text-center {
+    margin: auto;
+    text-align: center;
+}
+
+.sidebar .item-list {
+    list-style-type: None;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(150, 200, 30)
+}
+
+.sidebar .item {
+    font-size: large;
+    list-style-type: None;
+}
+
+.item-list {
+    list-style-type: None;
+}
+
+.chat .you-message {
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    margin: 10px 10px 10px 70%; /* top right bottom left */
+    padding: 10px 20px;
+    max-width: 50%;
+    min-width: 80px;
+    text-align: left;
+    display: inline-block;
+    word-break: break-word;
+    align-self: flex-end;
+}
+
+.chat .pal-message {
+    border-radius: 10px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    margin: 10px auto 10px 0;
+    padding: 10px 20px;
+    max-width: 70%;
+    text-align: left;
+    display: inline-block;
+    word-break: break-word;
+}
+
+.chat .pal-name {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.chat .input {
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    border-radius: 50px;
+    padding: 10px;
+    height: 60px;
+    width: 77%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.chat {
+    flex: 1;
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    float: top right;
+    height: 100%;
+    margin-left: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.chat .site-message {
+    margin: auto;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.chat .send {
+    float: right;
+    margin-right: 5px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
